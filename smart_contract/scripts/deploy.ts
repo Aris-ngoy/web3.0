@@ -1,10 +1,15 @@
 import { ethers } from "hardhat";
 
 const main = async () => {
-  const Transactions = await ethers.getContractFactory("Transactions");
-  const transactions = await Transactions.deploy();
-  await transactions.deployed();
-  console.log("Transactions deployed to:", transactions.address);
+  // const Transactions = await ethers.getContractFactory("Transactions");
+  // const transactions = await Transactions.deploy();
+  // await transactions.deployed();
+  // console.log("Transactions deployed to:", transactions.address);
+
+  const ProductDetail = await ethers.getContractFactory("ProductDetail");
+  const productDetail = await ProductDetail.deploy();
+  await productDetail.deployed();
+  console.log("ProductDetail deployed to:", productDetail.address);
 }
 
 const runMain = async () => {
